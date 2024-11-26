@@ -11,7 +11,7 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/events/get_events.php`);
+        const response = await fetch("/api/events/get_events");
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
