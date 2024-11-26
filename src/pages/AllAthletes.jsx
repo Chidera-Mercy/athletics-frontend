@@ -14,7 +14,7 @@ export const AthleteList = () => {
   useEffect(() => {
     const fetchAthletes = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/athletes/get_athletes.php`);
+        const response = await fetch("/api/athletes/get_athletes");
         const data = await response.json();
         
         if (data.status === 'success') {
