@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/:path*"
+    }
+  ]
+}
