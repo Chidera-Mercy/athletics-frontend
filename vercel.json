@@ -11,6 +11,10 @@
     {
       "source": "/api/news/get_news",
       "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/news/get_news.php"
-    }
+    },
+    {
+      "source": "/api/athletes/get_athletes_of_week",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/athletes/get_athletes_of_week.php"
+    },
   ]
 }
