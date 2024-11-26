@@ -11,7 +11,7 @@ export const Sports = () => {
   useEffect(() => {
     const fetchSports = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/sports/get_sports.php`);
+        const response = await fetch(`/api/sports/get_sports`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
