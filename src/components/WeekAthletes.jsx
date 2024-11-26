@@ -10,7 +10,7 @@ const WeekAthletes = () => {
   useEffect(() => {
     const fetchAthletesOfTheWeek = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/athletes/get_athletes_of_week.php`);
+        const response = await fetch("/api/athletes/get_athletes_of_week");
         
         if (!response.ok) {
           throw new Error('Network response was not ok');
