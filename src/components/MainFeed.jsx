@@ -28,7 +28,7 @@ const Highlights = () => {
   useEffect(() => {
     const fetchHighlights = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/highlights/get_highlights.php`);
+        const response = await fetch('/api/highlights/get_highlights');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -134,7 +134,7 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/news/get_news.php`);
+        const response = await fetch('/api/news/get_news');
         
         if (!response.ok) {
           throw new Error('Network response was not ok');
