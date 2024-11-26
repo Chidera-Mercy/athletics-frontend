@@ -11,7 +11,7 @@ const Teams = () => {
   useEffect(() => {
     const fetchTeams = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/recruit/get_teams.php`);
+        const response = await fetch("/api/recruit/get_teams");
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
