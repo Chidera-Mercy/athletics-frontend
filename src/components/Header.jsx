@@ -23,7 +23,7 @@ export function Header() {
   const handleLogout = () => {
     localStorage.removeItem('user');
     setUser(null);
-    navigate('/athletics-frontend');
+    navigate('/');
   };
 
 
@@ -239,7 +239,7 @@ export function Header() {
       <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <Link to="/athletics-frontend" className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0">
               <img
                 src="/ashesi-logo.png"
                 alt="Ashesi logo"
@@ -250,7 +250,7 @@ export function Header() {
             <div className="hidden md:flex items-center space-x-4">
               {/* Dashboard link only for admin users */}
               {user && user.role === 'administrator' && (
-                <Link to="/athletics-frontend/dashboard">
+                <Link to="/dashboard">
                   <button
                     type="button"
                     className="px-4 py-2 text-red-700 hover:bg-gray-100 rounded-md transition-colors"
@@ -315,7 +315,7 @@ export function Header() {
           <div className="flex flex-col items-center space-y-2 py-4">
             {/* Dashboard link only for admin users */}
             {user && user.role === 'administrator' && (
-              <Link to="/athletics-frontend/dashboard" className="w-full text-center">
+              <Link to="/dashboard" className="w-full text-center">
                 <button
                   type="button"
                   className="w-full px-4 py-2 text-red-700 hover:bg-gray-100 transition-colors"
@@ -375,7 +375,7 @@ export function Header() {
             {navbarLinks.map((link) => (
               <Link
                 key={link.id}
-                to={`/athletics-frontend/${link.href}`}
+                to={`/${link.href}`}
                 className={`
                   text-white font-medium px-4 py-3 md:py-4 
                   hover:bg-red-700 transition-colors duration-200
