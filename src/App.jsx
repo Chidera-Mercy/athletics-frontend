@@ -17,43 +17,43 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
-        path: "/athletics-frontend",
+        path: "/",
         element: <LandingPage />,
       },
       {
-        path: "/athletics-frontend/all-sports",
+        path: "/all-sports",
         element: <Sports />,
       },
       {
-        path: "/athletics-frontend/tickets",
+        path: "/tickets",
         element: <Tickets />,
       },
       {
-        path: "/athletics-frontend/athlete-list",
+        path: "/athlete-list",
         element: <AthleteList />,
       },
       {
-        path: "/athletics-frontend/events",
+        path: "/events",
         element: <Events />,
       },
       {
-        path: "/athletics-frontend/recruit",
+        path: "/recruit",
         element: <Recruitment />,
       },
       {
-        path: "/athletics-frontend/recruit-form",
+        path: "/recruit-form",
         element: <RecruitmentForm />,
       },
       {
-        path: "/athletics-frontend/shop",
+        path: "/shop",
         element: <Shop />,
       },
       {
-        path: "/athletics-frontend/dashboard",
+        path: "/dashboard",
         element: <AdminDashboard />,
       },
       {
-        path: "/athletics-frontend/teams",
+        path: "/teams",
         element: <Teams />,
       },
 
