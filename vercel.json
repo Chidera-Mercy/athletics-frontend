@@ -16,5 +16,9 @@
       "source": "/api/athletes/get_athletes_of_week",
       "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/athletes/get_athletes_of_week.php"
     },
+    {
+      "source": "/api/events/get_events",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/events/get_events.php"
+    }
   ]
 }
