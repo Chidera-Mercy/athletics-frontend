@@ -3,6 +3,14 @@
     {
       "source": "/api/sports/get_sports",
       "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/sports/get_sports.php"
-    }
+    },
+    {
+      "source": "/api/highlights/get_highlights",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/highlights/get_highlights.php"
+    },
+    {
+      "source": "/api/news/get_news",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/news/get_news.php"
+    },
   ]
 }
