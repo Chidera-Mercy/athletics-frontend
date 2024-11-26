@@ -19,6 +19,10 @@
     {
       "source": "/api/events/get_events",
       "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/events/get_events.php"
+    },
+    {
+      "source": "/api/recruit/get_teams",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/api/recruit/get_teams.php"
     }
   ]
 }
