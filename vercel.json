@@ -22,7 +22,19 @@
     },
     {
       "source": "/api/recruit/get_teams",
-      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/api/recruit/get_teams.php"
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/recruit/get_teams.php"
+    },
+    {
+      "source": "/api/athletes/get_athletes",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/athletes/get_athletes.php"
+    },
+    {
+      "source": "/api/recruit/submit_recruitment",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/recruit/submit_recruitment.php"
+    },
+      {
+      "source": "/api/shop/get_shop",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/shop/get_shop.php"
     }
   ]
 }
