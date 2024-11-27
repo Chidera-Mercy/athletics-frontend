@@ -32,9 +32,17 @@
       "source": "/api/recruit/submit_recruitment",
       "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/recruit/submit_recruitment.php"
     },
-      {
+    {
       "source": "/api/shop/get_shop",
       "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/shop/get_shop.php"
+    },
+    {
+      "source": "/api/auth/login",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/auth/login.php"
+    },
+    {
+      "source": "/api/auth/signup",
+      "destination": "http://169.239.251.102:3341/~chika.amanna/back-end/auth/signup.php"
     }
   ]
 }
