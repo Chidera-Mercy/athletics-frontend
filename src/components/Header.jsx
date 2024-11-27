@@ -37,7 +37,7 @@ export function Header() {
     };
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/auth/login.php`, {
+      const response = await fetch("/api/auth/login", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ export function Header() {
     };
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/auth/signup.php`, {
+      const response = await fetch("/api/auth/signup", {
         
         method: 'POST',
         headers: {
