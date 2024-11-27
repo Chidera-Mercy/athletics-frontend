@@ -117,7 +117,7 @@ const AthletesManagement = () => {
   // Handle Delete
   const handleDelete = async (id) => {
     try {
-      const response = await fetch("/api/athletes/delete_athlete?id=${id}", {
+      const response = await fetch(`/api/athletes/delete_athlete?id=${id}`, {
         method: 'DELETE'
       });
       const result = await response.json();
