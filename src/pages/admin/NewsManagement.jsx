@@ -17,7 +17,7 @@ const NewsManagement = () => {
   const fetchNews = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/news/get_news.php`);
+      const response = await fetch("/api/news/get_news");
       const result = await response.json();
       
       if (result.status === 'success') {
@@ -37,7 +37,7 @@ const NewsManagement = () => {
   // Fetch sports for dropdown
   const fetchSports = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/sports/get_sports.php`);
+      const response = await fetch("/api/sports/get_sports");
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -67,7 +67,7 @@ const NewsManagement = () => {
         ? { ...newsForm, news_id: selectedItem.id }
         : newsForm;
 
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/news/addOrUpdateNews.php`, {
+      const response = await fetch("/api/news/addOrUpdateNews", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -98,7 +98,7 @@ const NewsManagement = () => {
   //Handle Delete
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/news/delete_news.php?id=${id}`, {
+      const response = await fetch("/api/news/delete_news?id=${id}", {
         method: 'DELETE'
       });
       const result = await response.json();
