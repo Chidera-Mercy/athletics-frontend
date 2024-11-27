@@ -111,7 +111,7 @@ const EventsManagement = () => {
   // Handle Delete
   const handleDelete = async (id) => {
     try {
-      const response = await fetch("/api/events/delete_event?id=${id}", {
+      const response = await fetch(`/api/events/delete_event?id=${id}`, {
         method: 'DELETE'
       });
       const result = await response.json();
