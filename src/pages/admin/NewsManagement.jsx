@@ -98,7 +98,7 @@ const NewsManagement = () => {
   //Handle Delete
   const handleDelete = async (id) => {
     try {
-      const response = await fetch("/api/news/delete_news?id=${id}", {
+      const response = await fetch(`/api/news/delete_news?id=${id}`, {
         method: 'DELETE'
       });
       const result = await response.json();
