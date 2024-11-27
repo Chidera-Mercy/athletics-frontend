@@ -19,7 +19,7 @@ const TeamsManagement = () => {
   const fetchTeams = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/recruit/get_teams.php`);
+      const response = await fetch("/api/recruit/get_teams");
       const result = await response.json();
       
       if (!result.error) {
@@ -39,7 +39,7 @@ const TeamsManagement = () => {
   // Fetch sports for dropdown
   const fetchSports = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/sports/get_sports.php`);
+      const response = await fetch("/api/sports/get_sports");
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -67,7 +67,7 @@ const TeamsManagement = () => {
         ? { ...teamForm, team_id: selectedItem.id }
         : teamForm;
 
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/teams/addOrUpdateTeam.php`, {
+      const response = await fetch("/api/teams/addOrUpdateTeam", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -100,7 +100,7 @@ const TeamsManagement = () => {
   // Handle Delete
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/teams/delete_team.php?id=${id}`, {
+      const response = await fetch(`/api/teams/delete_team?id=${id}`, {
         method: 'DELETE'
       });
       const result = await response.json();
