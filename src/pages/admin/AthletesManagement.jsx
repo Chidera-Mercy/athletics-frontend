@@ -23,10 +23,10 @@ const AthletesManagement = () => {
   const fetchAthletes = async () => {
     try {
       setLoading(true);
-      const athletesResponse = await fetch(`${import.meta.env.VITE_BACKEND_API}/athletes/get_athletes.php`);
+      const athletesResponse = await fetch("/api/athletes/get_athletes");
       const athletesResult = await athletesResponse.json();
       
-      const sportsResponse = await fetch(`${import.meta.env.VITE_BACKEND_API}/sports/get_sports.php`);
+      const sportsResponse = await fetch("/api/sports/get_sports");
       const sportsResult = await sportsResponse.json();
       
       if (Array.isArray(athletesResult.athletes)) {
@@ -83,7 +83,7 @@ const AthletesManagement = () => {
         formData.append('athlete_id', selectedAthlete.id);
       }
 
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/athletes/addOrUpdateAthlete.php`, {
+      const response = await fetch("/api/athletes/addOrUpdateAthlete", {
         method: 'POST',
         body: formData
       });
@@ -117,7 +117,7 @@ const AthletesManagement = () => {
   // Handle Delete
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/athletes/delete_athlete.php?id=${id}`, {
+      const response = await fetch("/api/athletes/delete_athlete?id=${id}", {
         method: 'DELETE'
       });
       const result = await response.json();
