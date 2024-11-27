@@ -18,7 +18,7 @@ const HighlightsManagement = () => {
   const fetchHighlights = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/highlights/get_highlights.php`);
+      const response = await fetch("/api/highlights/get_highlights");
       const result = await response.json();
       
       if (Array.isArray(result)) {
@@ -70,7 +70,7 @@ const HighlightsManagement = () => {
         formData.append('highlight_id', selectedItem.id);
       }
 
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/highlights/addOrUpdateHighlight.php`, {
+      const response = await fetch("/api/highlights/addOrUpdateHighlight", {
         method: 'POST',
         body: formData
       });
@@ -100,7 +100,7 @@ const HighlightsManagement = () => {
   // Handle Delete
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/highlights/delete_highlight.php?id=${id}`, {
+      const response = await fetch("/api/highlights/delete_highlight?id=${id}", {
         method: 'DELETE'
       });
       const result = await response.json();
