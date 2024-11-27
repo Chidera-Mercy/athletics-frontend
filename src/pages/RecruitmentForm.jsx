@@ -42,12 +42,12 @@ const RecruitmentForm = () => {
     const fetchSportsAndTeams = async () => {
       try {
         // Fetch Sports
-        const sportsResponse = await fetch(`${import.meta.env.VITE_BACKEND_API}/sports/get_sports.php`);
+        const sportsResponse = await fetch("/api/sports/get_sports");
         const sportsData = await sportsResponse.json();
         setSports(sportsData);
   
         // Fetch Teams
-        const teamsResponse = await fetch(`${import.meta.env.VITE_BACKEND_API}/recruit/get_teams.php`);
+        const teamsResponse = await fetch("/api/recruit/get_teams");
         const teamsData = await teamsResponse.json();
         setTeams(teamsData);
       } catch (error) {
@@ -98,7 +98,7 @@ const RecruitmentForm = () => {
     });
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/recruit/submit_recruitment.php`, {
+      const response = await fetch("/api/recruit/submit_recruitment", {
         method: 'POST',
         body: formSubmissionData
       });
