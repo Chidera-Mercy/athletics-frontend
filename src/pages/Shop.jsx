@@ -27,7 +27,7 @@ const Shop = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/shop/get_shop.php`);
+        const response = await fetch("/api/shop/get_shop");
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }
