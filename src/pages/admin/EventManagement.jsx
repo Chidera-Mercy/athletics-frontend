@@ -21,7 +21,7 @@ const EventsManagement = () => {
   // Fetch Sports for Dropdown
   const fetchSports = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/sports/get_sports.php`);
+      const response = await fetch("/api/sports/get_sports");
       const result = await response.json();
       
       if (Array.isArray(result)) {
@@ -39,7 +39,7 @@ const EventsManagement = () => {
   const fetchEvents = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/events/get_events.php`);
+      const response = await fetch("/api/events/get_events");
       const result = await response.json();
       
       if (result.status === 'success') {
@@ -78,7 +78,7 @@ const EventsManagement = () => {
         formData.append('event_id', selectedItem.id);
       }
 
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/events/addOrUpdateEvent.php`, {
+      const response = await fetch("/api/events/addOrUpdateEvent", {
         method: 'POST',
         body: formData
       });
@@ -111,7 +111,7 @@ const EventsManagement = () => {
   // Handle Delete
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/events/delete_event.php?id=${id}`, {
+      const response = await fetch("/api/events/delete_event?id=${id}", {
         method: 'DELETE'
       });
       const result = await response.json();
