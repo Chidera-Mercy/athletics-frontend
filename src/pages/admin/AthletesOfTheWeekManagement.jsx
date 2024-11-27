@@ -12,7 +12,7 @@ const AthletesOfTheWeekManagement = () => {
   useEffect(() => {
     const fetchAthletes = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/athletes/get_athletes.php`);
+        const response = await fetch("/api/athletes/get_athletes");
         const data = await response.json();
         
         if (data.status === 'success') {
@@ -57,7 +57,7 @@ const AthletesOfTheWeekManagement = () => {
     }
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/athletes/set_athletes_of_week.php`, {
+      const response = await fetch("/api/athletes/set_athletes_of_week", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
