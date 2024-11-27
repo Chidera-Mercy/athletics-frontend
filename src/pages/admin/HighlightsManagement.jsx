@@ -100,7 +100,7 @@ const HighlightsManagement = () => {
   // Handle Delete
   const handleDelete = async (id) => {
     try {
-      const response = await fetch("/api/highlights/delete_highlight?id=${id}", {
+      const response = await fetch(`/api/highlights/delete_highlight?id=${id}`, {
         method: 'DELETE'
       });
       const result = await response.json();
